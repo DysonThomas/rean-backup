@@ -156,6 +156,7 @@ export default {
         updatepay()
              {
                   db.collection("orders").doc(this.docId).update({
+                  docId:this.docId,
                   paid: "true"
                   })
                 .then(function() {

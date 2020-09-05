@@ -41,8 +41,11 @@ export default  new Vuex.Store({
           },
           deleteCart(state,item){
             state.cart.splice(0, state.cart.length)
+            window.localStorage.removeItem('cart');
           },
           removeFromCart(state, item){
+
+             
 
             let index = state.cart.indexOf(item);
             state.cart.splice(index,1);
